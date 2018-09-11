@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 
 
 # psutil = process and system utilities，它不仅可以通过一两行代码实现系统监控，还可以跨平台使用，支持Linux／UNIX／OSX／Windows等，是系统管理员和运维小伙伴不可或缺的必备模块

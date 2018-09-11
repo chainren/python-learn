@@ -1,7 +1,7 @@
 # 进程通信
 # Process之间肯定是需要通信的，操作系统提供了很多机制来实现进程间的通信。Python的multiprocessing模块包装了底层的机制，提供了Queue、Pipes等多种方式来交换数据。
 
-# encoding=utf8
+# -- coding: utf-8 --
 
 # 我们以Queue为例，在父进程中创建两个子进程，一个往Queue里写数据，一个从Queue里读数据：
 

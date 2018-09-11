@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 
 # chardet 可以检测未知字符编码
 

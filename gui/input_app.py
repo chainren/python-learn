@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 
 from tkinter import *
 import tkinter.messagebox as messagebox

@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 
 # requests模块
 # 安装： pip install requests

@@ -1,6 +1,6 @@
 # JSON 序列化成标准的数据格式，比如json、xml等，可以在不同语言程序之间通信
 # Python内置的json模块提供了非常完善的Python对象到JSON格式的转换。
-# encoding=utf8
+# -- coding: utf-8 --
 
 import json
 

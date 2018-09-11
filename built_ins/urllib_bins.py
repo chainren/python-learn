@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 # urllib提供了一系列用于操作URL的功能。
 
 from urllib import request, parse

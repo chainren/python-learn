@@ -1,4 +1,4 @@
-# encoding=utf8
+# -- coding: utf-8 --
 
 # xml解析 dom sax
 

@@ -1,6 +1,6 @@
 # Pool
 # 如果要启动大量的子进程，可以用进程池的方式批量创建子进程：
-# encoding=utf8
+# -- coding: utf-8 --
 
 from multiprocessing import Pool
 
