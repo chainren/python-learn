@@ -7,15 +7,26 @@ import time
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 监听端口:
-s.bind(('127.0.0.1', '8899'))
+s.bind(('127.0.0.1', 8899))
 
 # 开始监听端口
 s.listen(5)
-print('Waitting for connection...')
+print('Waiting for connection...')
 
 
 def handler(sock, addr):
-    pass
+    print('Accept new connection from %s:%s...' % addr)
+    sock.send(b'Welcome!')
+    while True:
+        data = sock.recv(1024)
+        time.sleep(1)
+        if not data or data.decode('utf-8') == 'exit':
+            break
+        msg = b'Hello, %s' % data.decode('utf-8').encode('utf-8')
+        sock.send(msg)
+    sock.close()
+    print('Connection from %s:%s closed.' % addr)
+
 
 
 while True:
@@ -25,3 +36,4 @@ while True:
     # w创建新线程处理连接
     t = threading.Thread(target=handler, args=(sock, addr))
     t.start()
+
