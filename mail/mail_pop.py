@@ -15,7 +15,7 @@ password = input('Pass:')
 pop3_server = input('POP3 Server:')
 
 # 连接到pop3服务器
-server = poplib.POP3_SSL(pop3_server, port=995)
+server = poplib.POP3_SSL(pop3_server, port=995) # qq邮箱，使用ssl连接，端口995
 # 可以打开或关闭调试信息
 server.set_debuglevel(1)
 # 可选：打印pop3服务器的欢迎文字
