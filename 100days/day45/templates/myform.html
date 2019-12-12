@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-
-<html>
+<!DOCTYPE html>as
+{% from 'bootstrap/form.html' import render_form, render_form_row, render_field %}
 <form method="POST" action="/">
-    {{ form.csrf_token }}
-    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ render_form(form) }}
     <input type="submit" value="Go">
 </form>
-
-</html>

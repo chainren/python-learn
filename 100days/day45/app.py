@@ -1,12 +1,12 @@
 from flask import Flask, render_template, redirect
-
 from myForm import MyForm, ProfileForm, PhotoForm
-
 from werkzeug import secure_filename
-
 import os
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+# 实例化bootstrap
+bootstrap = Bootstrap(app)
 
 # 定义secret_key，用于csrf
 app.secret_key = 'abc'
@@ -45,6 +45,16 @@ def upload():
         filename = None
     return render_template('photo.html', form=form, filename=filename)
 
+
+@app.route('/profile', methods=['GET','POST'])
+def profile():
+    form =ProfileForm()
+    if form.validate_on_submit():
+        return 'success'
+    return render_template('profile_form.html', form = form)
+        
+        
+    
 
 if __name__ == '__main__':
     app.run(port=8888, debug=True)
