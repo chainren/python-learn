@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<form action="/info" method="POST">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name}}<br>
+    {{ form.city.label}} {{ form.city }}<br>
+    {{ form.gender.label }} {{ form.gender }}<br>
+    {{ form.birthday.label }} {{ form.birthday }}<br>
+    {{ form.interest.label }} {{ form.interest }}<br>
+    <input type="submit" value="Submit">
+</form>
+{% macro render_field(field) %}
+<dt>{{ field.label }}:
+<dd>{{ field(**kwargs)|safe }}
+    {% if field.errors %}
+    <ul class=errors>
+        {% for error in field.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</dd>
+{% endmacro %}
+
+</html>
