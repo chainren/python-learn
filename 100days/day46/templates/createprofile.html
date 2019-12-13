@@ -1,0 +1,8 @@
+<h2>User profile</h2>
+<form method="POST" action="/createprofile">
+    {{ form.csrf_token() }}
+    {{ form.name.label }} {{ form.name }}<br>
+    {{ form.birthday.label }} {{form.birthday }}<br>
+    {{ form.about.label }} {{ form.about }}<br>
+    <input type="submit" value="Submit">
+</form>
