@@ -11,8 +11,8 @@ oauth = OAuth(app)
 
 
 # 认证服务器配置
-app.config['GITHUB_CLIENT_ID']='ad9d3d3a6e6dfcc47b2c'
-app.config['GITHUB_CLIENT_SECRET'] = '72b51f9878fe5f115d3ddd6d1d6fb0c718c6aa70'
+app.config['GITHUB_CLIENT_ID']='' # 在github上申请app 并获取
+app.config['GITHUB_CLIENT_SECRET'] = ''
 app.config['GITHUB_AUTHORIZE_URL'] = 'https://github.com/login/oauth/authorize'
 app.config["GITHUB_AUTHORIZE_PARAMS"] = {
     'scope': 'user repo'
